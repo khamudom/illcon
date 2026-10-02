@@ -1,0 +1,22 @@
+{
+  "name": "Illcon-prototype",
+  "version": "1.0.0",
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "bundle": "esbuild src/App.tsx --bundle --minify --format=iife --target=es2020 --define:process.env.NODE_ENV=\\\"production\\\" --outfile=out.js",
+    "build": "npm run typecheck && npm run bundle && node build.mjs",
+    "start": "node serve.mjs"
+  },
+  "dependencies": {
+    "@fluentui/react-components": "^9.74.9",
+    "@fluentui/react-icons": "^2.0.343",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "esbuild": "^0.28.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "type": "module"
+}
